@@ -65,7 +65,6 @@ const generateFullHtml = (employeeList) => {
   <div class="row">
     ${generateInnerHtml(employeeList)}
   </div>
-  </div>
 
     </body>
 </html>
