@@ -8,6 +8,6 @@ prompt.promptUser(employeeList)
     // promptUser is a promise, so we need to chain .then to get the result
     .then((res) => {
         console.log(res);
-        return gen.generateInnerHtml(res);
+        return gen.generateFullHtml(res);
     })
-    .then(res => console.log(res));
+    .then(res => save.saveFile(res));
