@@ -46,4 +46,31 @@ const generateInnerHtml = (employeeList) => {
     return htmlString;
 }
 
-module.exports = { generateInnerHtml }
+const generateFullHtml = (employeeList) => {
+    return `
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Team Profile</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+      </head>
+  
+  <body>
+  <div class="p-3 mb-2 bg-info text-dark">
+  <h1 class="display-1">Team Profile</h1>
+  </div>
+  <div class="container">
+  <div class="row">
+    ${generateInnerHtml(employeeList)}
+  </div>
+  </div>
+
+    </body>
+</html>
+
+    `
+}
+
+module.exports = { generateFullHtml }
